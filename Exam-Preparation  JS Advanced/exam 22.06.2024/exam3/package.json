@@ -1,0 +1,19 @@
+{
+  "name": "exam3",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "food delivery.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.4.0"
+  }
+}

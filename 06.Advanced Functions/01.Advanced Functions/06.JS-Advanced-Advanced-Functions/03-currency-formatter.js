@@ -16,16 +16,16 @@ const createFormatter3 = (separator, symbol, symbolFirst) => (value) =>
 
 const bgFormatter = createFormatter(',', 'лв.', false);
 
-console.log(bgFormatter(20));
-console.log(bgFormatter(200));
+// console.log(bgFormatter(20));
+// console.log(bgFormatter(200));
 
-const usFormatter = createFormatter2('.', '$', true);
-console.log(usFormatter(10));
+const dollarFormatter = createFormatter2('.', '$', true);
+console.log(dollarFormatter(5345));   
 
 // Curry currency fomatter
 const curryCurrency = separator => symbol => symbolFirst => value => currencyFormatter(separator, symbol, symbolFirst, value);
 const gbpFomatter = curryCurrency('.')('GBP')(false); 
-console.log(gbpFomatter(5));
+// console.log(gbpFomatter(5));
 
 const dotCurrencyFormatterBuilder = curryCurrency('.');
 
@@ -37,5 +37,5 @@ function currencyFormatter(separator, symbol, symbolFirst, value) {
     else return result + ' ' + symbol;
 }
 
-const result = currencyFormatter(',', 'лв.', false, 10);
-console.log(result);
+// const result = currencyFormatter(',', 'лв.', false, 10);
+// console.log(result);
